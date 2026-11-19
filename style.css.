@@ -327,6 +327,3 @@ footer {
         padding: 22px;
     }
   }
-body {
-    background: red !important;
-}
