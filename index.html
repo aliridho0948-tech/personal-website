@@ -6,6 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ali | Personal Portfolio</title>
 
+    .typing {
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.typing span {
+    color: var(--cyan);
+    text-shadow: 0 0 12px var(--cyan);
+}
+
+.typing span::after {
+    content: "|";
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -274,8 +294,11 @@ footer {
     <div class="tag">WELCOME TO MY DIGITAL SPACE</div>
 
     <h1>Hello, I'm<br>
-    <span>Ali Ridho.</span></h1>
+<span>Ali Ridho.</span></h1>
 
+<h3 class="typing">
+    I'm a <span id="typing"></span>
+</h3>
     <p>
         An English Education student who loves
         learning, technology, gaming, and exploring
@@ -355,6 +378,46 @@ footer {
 </footer>
 
 <script>
+const words = [
+    "Student",
+    "English Learner",
+    "Creative Thinker",
+    "Future Developer"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+    const word = words[wordIndex];
+
+    if (!deleting) {
+        typing.textContent = word.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === word.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1200);
+            return;
+        }
+    } else {
+        typing.textContent = word.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+
+    setTimeout(typeEffect, deleting ? 60 : 110);
+}
+
+typeEffect();
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
