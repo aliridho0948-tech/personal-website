@@ -2,4 +2,4 @@
 My Personal Website
 
 
-Please Cleick the Github page to open my web
+Please Click the Github pages below to visit my web
