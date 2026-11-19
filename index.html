@@ -1,23 +1,146 @@
 
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>My Personal Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e293b;
+        }
+
+        header h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        section {
+            padding: 100px 8%;
+            min-height: 75vh;
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .home h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .home span {
+            color: #38bdf8;
+        }
+
+        .home p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        .about {
+            background: #1e293b;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .home h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                margin: 0 5px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Website!</h1>
+<header>
+    <h2>My Website</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
+<section class="home" id="home">
+    <h1>Hello, I'm <span>Ali!</span></h1>
+    <p>Welcome to my personal website.</p>
+    <p>Learning, creating, and exploring something new.</p>
+    <a href="#about" class="btn">Explore More</a>
+</section>
+
+<section class="about" id="about">
     <h2>About Me</h2>
+    <p>
+        Hello! I'm Ali. I enjoy learning English,
+        technology, games, and exploring new things.
+    </p>
+</section>
 
-    <p>Halo! Nama saya Ali.</p>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Thank you for visiting my website!</p>
+</section>
 
-    <p>Saya mahasiswa Pendidikan Bahasa Inggris.</p>
-
-    <p>Selamat datang di website pribadi saya.</p>
+<footer>
+    © 2026 My Personal Website
+</footer>
 
 </body>
 </html>
