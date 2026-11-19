@@ -311,6 +311,27 @@ footer {
         transform: translateY(-10px);
     }
 }
+   .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: var(--primary);
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    color: var(--bg);
+    box-shadow: 0 0 15px var(--primary);
+}
 </style>
 </head>
 
@@ -442,7 +463,13 @@ footer {
     <h2 class="section-title reveal">
         Get In <span>Touch.</span>
     </h2>
+<div class="social-links">
+    <a href="https://www.instagram.com/USERNAME_IG/"
+       target="_blank">Instagram</a>
 
+    <a href="https://www.tiktok.com/@USERNAME_TIKTOK"
+       target="_blank">TikTok</a>
+</div>
     <div class="contact-card reveal">
         <h3>Thanks for visiting!</h3>
         <p style="color:#aab5ca;margin-top:15px">
