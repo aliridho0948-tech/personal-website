@@ -58,6 +58,7 @@ body::after {
 
 
 
+
 header {
     position: fixed;
     top: 0;
@@ -68,37 +69,33 @@ header {
     align-items: center;
 
     background: linear-gradient(
-        120deg,
+        110deg,
         #080b18,
         #003b70,
+        #00a6bd,
         #251052,
-        #005b70,
         #080b18
     );
 
-    background-size: 400% 400%;
-    animation: cyberEnergy 7s ease infinite;
+    background-size: 300% 300%;
+    animation: cyberMove 5s ease infinite;
 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 
     border-bottom: 2px solid #00f5ff;
-    box-shadow:
-        0 0 15px #00f5ff70,
-        0 5px 30px #a855f750;
+    box-shadow: 0 0 25px #00f5ff80;
 
     z-index: 100;
 }
 
-@keyframes cyberEnergy {
+@keyframes cyberMove {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
