@@ -57,6 +57,7 @@ body::after {
 }
 
 
+
 header {
     position: fixed;
     top: 0;
@@ -69,20 +70,22 @@ header {
     background: linear-gradient(
         120deg,
         #080b18,
-        #102b45,
-        #25103d,
-        #063c49,
+        #003b70,
+        #251052,
+        #005b70,
         #080b18
     );
 
-    background-size: 300% 300%;
-    animation: cyberEnergy 12s ease infinite;
+    background-size: 400% 400%;
+    animation: cyberEnergy 7s ease infinite;
 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 
-    border-bottom: 1px solid #00f5ff70;
-    box-shadow: 0 5px 25px #00f5ff20;
+    border-bottom: 2px solid #00f5ff;
+    box-shadow:
+        0 0 15px #00f5ff70,
+        0 5px 30px #a855f750;
 
     z-index: 100;
 }
@@ -91,9 +94,11 @@ header {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
