@@ -56,6 +56,7 @@ body::after {
     z-index: -1;
 }
 
+
 header {
     position: fixed;
     top: 0;
@@ -64,11 +65,40 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(8,11,24,.85);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid #ffffff15;
+
+    background: linear-gradient(
+        120deg,
+        #080b18,
+        #102b45,
+        #25103d,
+        #063c49,
+        #080b18
+    );
+
+    background-size: 300% 300%;
+    animation: cyberEnergy 12s ease infinite;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid #00f5ff70;
+    box-shadow: 0 5px 25px #00f5ff20;
+
     z-index: 100;
 }
+
+@keyframes cyberEnergy {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .logo {
     font-family: 'Orbitron', sans-serif;
